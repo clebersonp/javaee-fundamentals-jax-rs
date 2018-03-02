@@ -10,7 +10,10 @@ import java.util.List;
 @Entity
 @NamedQuery(name = Department.FIND_ALL_DEPARTMENTS, query = "select d from Department d order by d.name")
 public class Department implements Serializable {
-    public static final String FIND_ALL_DEPARTMENTS = "findAllDepartments";
+	private static final long serialVersionUID = 9216517820825868288L;
+	
+	public static final String FIND_ALL_DEPARTMENTS = "findAllDepartments";
+	
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(updatable = false, nullable = false)
